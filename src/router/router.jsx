@@ -14,20 +14,22 @@ function isProduction() {
 const basename = isProduction();
 console.log(basename);
 
-const router = createBrowserRouter([
-  {
-    path: "/", // / är startsidan
-    element: <Events />,
-  },
-  {
-    path: "/event",
-    element: <SelectedEvent />,
-  },
-  {
-    path: "/confirmation",
-    element: <Confirmation />,
-  },
-  basename,
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/", // / är startsidan
+      element: <Events />,
+    },
+    {
+      path: "/event",
+      element: <SelectedEvent />,
+    },
+    {
+      path: "/confirmation",
+      element: <Confirmation />,
+    },
+  ],
+  basename
+);
 
 export default router;
