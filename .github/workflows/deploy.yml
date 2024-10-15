@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  VITE_BASE_URL: "/test"
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       element: <Confirmation />,
     },
   ],
-  { basename: "/test" }
+  { basename: import.meta.env.VITE_BASE_URL }
 );
 
 export default router;
