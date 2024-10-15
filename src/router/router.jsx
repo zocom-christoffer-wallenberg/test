@@ -11,6 +11,9 @@ function isProduction() {
   else return {};
 }
 
+const basename = isProduction();
+console.log(basename);
+
 const router = createBrowserRouter([
   {
     path: "/", // / är startsidan
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
     path: "/confirmation",
     element: <Confirmation />,
   },
-  isProduction(),
+  basename,
 ]);
 
 export default router;
