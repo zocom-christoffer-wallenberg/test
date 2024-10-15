@@ -4,19 +4,22 @@ import Events from "../pages/Events";
 import SelectedEvent from "../pages/SelectedEvent";
 import Confirmation from "../pages/Confirmation";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
     {
-        path: '/', // / är startsidan
-        element: <Events />
+      path: "/", // / är startsidan
+      element: <Events />,
     },
     {
-        path: '/event',
-        element: <SelectedEvent />
+      path: "/event",
+      element: <SelectedEvent />,
     },
     {
-        path: '/confirmation',
-        element: <Confirmation />
-    }
-]);
+      path: "/confirmation",
+      element: <Confirmation />,
+    },
+  ],
+  { basename: "/test" }
+);
 
 export default router;
